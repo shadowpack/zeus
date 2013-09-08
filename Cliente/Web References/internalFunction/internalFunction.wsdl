@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:internalFunction" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:internalFunction" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:internalFunction">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="AliveStatusRequest">
+    <wsdl:part name="db" type="xsd:string" />
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+    <wsdl:part name="token" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="AliveStatusResponse">
+    <wsdl:part name="return" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:message name="checkAddOnsRequest">
+    <wsdl:part name="id_empresa" type="xsd:string" />
+    <wsdl:part name="id_user" type="xsd:string" />
+    <wsdl:part name="db_target" type="xsd:string" />
+    <wsdl:part name="db_user" type="xsd:string" />
+    <wsdl:part name="db_pass" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="checkAddOnsResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getIdUserRequest">
+    <wsdl:part name="db" type="xsd:string" />
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+    <wsdl:part name="token" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getIdUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="checkPrivilegeRequest">
+    <wsdl:part name="db" type="xsd:string" />
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+    <wsdl:part name="token" type="xsd:string" />
+    <wsdl:part name="privilege" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="checkPrivilegeResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="newMoneyAcountRequest">
+    <wsdl:part name="db" type="xsd:string" />
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+    <wsdl:part name="token" type="xsd:string" />
+    <wsdl:part name="name" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="newMoneyAcountResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getModulesRequest">
+    <wsdl:part name="db" type="xsd:string" />
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+    <wsdl:part name="token" type="xsd:string" />
+    <wsdl:part name="idempre" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getModulesResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="deletePrivilegeRequest">
+    <wsdl:part name="db" type="xsd:string" />
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+    <wsdl:part name="token" type="xsd:string" />
+    <wsdl:part name="idprivi" type="xsd:string" />
+    <wsdl:part name="idempresa" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="deletePrivilegeResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="newUserRequest">
+    <wsdl:part name="db" type="xsd:string" />
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+    <wsdl:part name="token" type="xsd:string" />
+    <wsdl:part name="name" type="xsd:string" />
+    <wsdl:part name="rut" type="xsd:string" />
+    <wsdl:part name="direccion" type="xsd:string" />
+    <wsdl:part name="telefonoFijo" type="xsd:string" />
+    <wsdl:part name="telefonoMovil" type="xsd:string" />
+    <wsdl:part name="id" type="xsd:string" />
+    <wsdl:part name="photo" type="xsd:string" />
+    <wsdl:part name="empresa" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="newUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="modUserRequest">
+    <wsdl:part name="db" type="xsd:string" />
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+    <wsdl:part name="token" type="xsd:string" />
+    <wsdl:part name="name" type="xsd:string" />
+    <wsdl:part name="rut" type="xsd:string" />
+    <wsdl:part name="direccion" type="xsd:string" />
+    <wsdl:part name="telefonoFijo" type="xsd:string" />
+    <wsdl:part name="telefonoMovil" type="xsd:string" />
+    <wsdl:part name="id" type="xsd:string" />
+    <wsdl:part name="photo" type="xsd:string" />
+    <wsdl:part name="empresa" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="modUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="searchUserRequest">
+    <wsdl:part name="db" type="xsd:string" />
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+    <wsdl:part name="token" type="xsd:string" />
+    <wsdl:part name="rut" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="searchUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getUserRequest">
+    <wsdl:part name="db" type="xsd:string" />
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+    <wsdl:part name="token" type="xsd:string" />
+    <wsdl:part name="empresa" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="newPagoRequest">
+    <wsdl:part name="db" type="xsd:string" />
+    <wsdl:part name="user" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+    <wsdl:part name="token" type="xsd:string" />
+    <wsdl:part name="name" type="xsd:string" />
+    <wsdl:part name="valor" type="xsd:string" />
+    <wsdl:part name="cuenta_cc" type="xsd:string" />
+    <wsdl:part name="recurrencia" type="xsd:string" />
+    <wsdl:part name="credito" type="xsd:string" />
+    <wsdl:part name="days" type="xsd:string" />
+    <wsdl:part name="cuota" type="xsd:string" />
+    <wsdl:part name="users" type="xsd:string" />
+    <wsdl:part name="account" type="xsd:string" />
+    <wsdl:part name="licencia" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="newPagoResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="internalFunctionPortType">
+    <wsdl:operation name="AliveStatus">
+      <documentation>Comprueba conectividad con el servidor</documentation>
+      <wsdl:input message="tns:AliveStatusRequest" />
+      <wsdl:output message="tns:AliveStatusResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="checkAddOns">
+      <documentation>Permite logear usuarios en el sistema sayc</documentation>
+      <wsdl:input message="tns:checkAddOnsRequest" />
+      <wsdl:output message="tns:checkAddOnsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getIdUser">
+      <documentation>Verifica si una id es ocupable</documentation>
+      <wsdl:input message="tns:getIdUserRequest" />
+      <wsdl:output message="tns:getIdUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="checkPrivilege">
+      <documentation>Verifica si una id es ocupable</documentation>
+      <wsdl:input message="tns:checkPrivilegeRequest" />
+      <wsdl:output message="tns:checkPrivilegeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="newMoneyAcount">
+      <documentation>Verifica si una id es ocupable</documentation>
+      <wsdl:input message="tns:newMoneyAcountRequest" />
+      <wsdl:output message="tns:newMoneyAcountResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getModules">
+      <documentation>Verifica si una id es ocupable</documentation>
+      <wsdl:input message="tns:getModulesRequest" />
+      <wsdl:output message="tns:getModulesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="deletePrivilege">
+      <documentation>Borra un privilegio determinado</documentation>
+      <wsdl:input message="tns:deletePrivilegeRequest" />
+      <wsdl:output message="tns:deletePrivilegeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="newUser">
+      <documentation>Agrega un nuevo usuario</documentation>
+      <wsdl:input message="tns:newUserRequest" />
+      <wsdl:output message="tns:newUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="modUser">
+      <documentation>Modifica y agrega un usuario</documentation>
+      <wsdl:input message="tns:modUserRequest" />
+      <wsdl:output message="tns:modUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="searchUser">
+      <documentation>Busca un usuario existente</documentation>
+      <wsdl:input message="tns:searchUserRequest" />
+      <wsdl:output message="tns:searchUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <documentation>Modifica y agrega un usuario</documentation>
+      <wsdl:input message="tns:getUserRequest" />
+      <wsdl:output message="tns:getUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="newPago">
+      <documentation>Modifica y agrega un usuario</documentation>
+      <wsdl:input message="tns:newPagoRequest" />
+      <wsdl:output message="tns:newPagoResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="internalFunctionBinding" type="tns:internalFunctionPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="AliveStatus">
+      <soap:operation soapAction="urn:internalFunction#AliveStatus" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkAddOns">
+      <soap:operation soapAction="urn:internalFunction#logUser" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIdUser">
+      <soap:operation soapAction="urn:internalFunction#getIdUser" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkPrivilege">
+      <soap:operation soapAction="urn:internalFunction#getIdUser" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="newMoneyAcount">
+      <soap:operation soapAction="urn:internalFunction#getIdUser" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getModules">
+      <soap:operation soapAction="urn:internalFunction#getIdUser" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletePrivilege">
+      <soap:operation soapAction="urn:internalFunction#getIdUser" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="newUser">
+      <soap:operation soapAction="urn:internalFunction#getIdUser" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modUser">
+      <soap:operation soapAction="urn:internalFunction#modUser" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchUser">
+      <soap:operation soapAction="urn:internalFunction#searchUser" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <soap:operation soapAction="urn:internalFunction#modUser" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="newPago">
+      <soap:operation soapAction="urn:internalFunction#modUser" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:internalFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="internalFunction">
+    <wsdl:port name="internalFunctionPort" binding="tns:internalFunctionBinding">
+      <soap:address location="http://localhost/Apolo Server/internalFunction.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
