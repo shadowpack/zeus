@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:initFunction" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:initFunction" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:initFunction">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="isAliveRequest" />
+  <wsdl:message name="isAliveResponse">
+    <wsdl:part name="return" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:message name="versionNameRequest">
+    <wsdl:part name="version" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="versionNameResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="newVersionCheckRequest" />
+  <wsdl:message name="newVersionCheckResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="requestUserRequest">
+    <wsdl:part name="id" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="requestUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="logUserRequest">
+    <wsdl:part name="id" type="xsd:string" />
+    <wsdl:part name="pass" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="logUserResponse">
+    <wsdl:part name="return" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="initFunctionPortType">
+    <wsdl:operation name="isAlive">
+      <documentation>Comprueba conectividad con el servidor</documentation>
+      <wsdl:input message="tns:isAliveRequest" />
+      <wsdl:output message="tns:isAliveResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="versionName">
+      <documentation>Obtiene el Nombre de la Version de Software</documentation>
+      <wsdl:input message="tns:versionNameRequest" />
+      <wsdl:output message="tns:versionNameResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="newVersionCheck">
+      <documentation>Comprueba nuevas versiones</documentation>
+      <wsdl:input message="tns:newVersionCheckRequest" />
+      <wsdl:output message="tns:newVersionCheckResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="requestUser">
+      <documentation>Busca Usuario en la base de datos Sayc</documentation>
+      <wsdl:input message="tns:requestUserRequest" />
+      <wsdl:output message="tns:requestUserResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="logUser">
+      <documentation>Permite logear usuarios en el sistema sayc</documentation>
+      <wsdl:input message="tns:logUserRequest" />
+      <wsdl:output message="tns:logUserResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="initFunctionBinding" type="tns:initFunctionPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="isAlive">
+      <soap:operation soapAction="urn:initFunction#query" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:initFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:initFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="versionName">
+      <soap:operation soapAction="urn:initFunction#versionName" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:initFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:initFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="newVersionCheck">
+      <soap:operation soapAction="urn:initFunction#query" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:initFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:initFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="requestUser">
+      <soap:operation soapAction="urn:initFunction#RequestUser" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:initFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:initFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logUser">
+      <soap:operation soapAction="urn:initFunction#logUser" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:initFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:initFunction" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="initFunction">
+    <wsdl:port name="initFunctionPort" binding="tns:initFunctionBinding">
+      <soap:address location="http://localhost/Apolo Server/initFunction.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
