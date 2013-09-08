@@ -35,9 +35,10 @@ Partial Class PrincipalScreen
         '
         Me.pboxactu.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pboxactu.Image = CType(resources.GetObject("pboxactu.Image"), System.Drawing.Image)
-        Me.pboxactu.Location = New System.Drawing.Point(736, 506)
+        Me.pboxactu.Location = New System.Drawing.Point(981, 623)
+        Me.pboxactu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pboxactu.Name = "pboxactu"
-        Me.pboxactu.Size = New System.Drawing.Size(22, 25)
+        Me.pboxactu.Size = New System.Drawing.Size(29, 31)
         Me.pboxactu.TabIndex = 26
         Me.pboxactu.TabStop = False
         '
@@ -46,7 +47,8 @@ Partial Class PrincipalScreen
         Me.menuForm.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProgramaToolStripMenuItem})
         Me.menuForm.Location = New System.Drawing.Point(0, 0)
         Me.menuForm.Name = "menuForm"
-        Me.menuForm.Size = New System.Drawing.Size(759, 24)
+        Me.menuForm.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
+        Me.menuForm.Size = New System.Drawing.Size(1012, 28)
         Me.menuForm.TabIndex = 27
         Me.menuForm.Text = "MenuStrip1"
         '
@@ -54,26 +56,27 @@ Partial Class PrincipalScreen
         '
         Me.ProgramaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CerrarSesionToolStripMenuItem})
         Me.ProgramaToolStripMenuItem.Name = "ProgramaToolStripMenuItem"
-        Me.ProgramaToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
+        Me.ProgramaToolStripMenuItem.Size = New System.Drawing.Size(86, 24)
         Me.ProgramaToolStripMenuItem.Text = "Programa"
         '
         'CerrarSesionToolStripMenuItem
         '
         Me.CerrarSesionToolStripMenuItem.Image = CType(resources.GetObject("CerrarSesionToolStripMenuItem.Image"), System.Drawing.Image)
         Me.CerrarSesionToolStripMenuItem.Name = "CerrarSesionToolStripMenuItem"
-        Me.CerrarSesionToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CerrarSesionToolStripMenuItem.Size = New System.Drawing.Size(165, 24)
         Me.CerrarSesionToolStripMenuItem.Text = "Cerrar Sesion"
         '
         'PrincipalScreen
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(759, 531)
+        Me.ClientSize = New System.Drawing.Size(1012, 654)
         Me.Controls.Add(Me.pboxactu)
         Me.Controls.Add(Me.menuForm)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.menuForm
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "PrincipalScreen"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form Principal"

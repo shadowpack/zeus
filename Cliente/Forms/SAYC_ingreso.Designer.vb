@@ -42,9 +42,10 @@ Partial Class SAYC_ingreso
         'pboxactu
         '
         Me.pboxactu.Image = CType(resources.GetObject("pboxactu.Image"), System.Drawing.Image)
-        Me.pboxactu.Location = New System.Drawing.Point(2, 324)
+        Me.pboxactu.Location = New System.Drawing.Point(3, 399)
+        Me.pboxactu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pboxactu.Name = "pboxactu"
-        Me.pboxactu.Size = New System.Drawing.Size(22, 25)
+        Me.pboxactu.Size = New System.Drawing.Size(29, 31)
         Me.pboxactu.TabIndex = 25
         Me.pboxactu.TabStop = False
         '
@@ -53,9 +54,10 @@ Partial Class SAYC_ingreso
         Me.lblEmpre.AutoSize = True
         Me.lblEmpre.Enabled = False
         Me.lblEmpre.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmpre.Location = New System.Drawing.Point(131, 133)
+        Me.lblEmpre.Location = New System.Drawing.Point(175, 164)
+        Me.lblEmpre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblEmpre.Name = "lblEmpre"
-        Me.lblEmpre.Size = New System.Drawing.Size(68, 18)
+        Me.lblEmpre.Size = New System.Drawing.Size(86, 24)
         Me.lblEmpre.TabIndex = 24
         Me.lblEmpre.Text = "Empresa"
         '
@@ -64,9 +66,10 @@ Partial Class SAYC_ingreso
         Me.lblEmpresa.AutoSize = True
         Me.lblEmpresa.Enabled = False
         Me.lblEmpresa.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmpresa.Location = New System.Drawing.Point(52, 133)
+        Me.lblEmpresa.Location = New System.Drawing.Point(69, 164)
+        Me.lblEmpresa.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblEmpresa.Name = "lblEmpresa"
-        Me.lblEmpresa.Size = New System.Drawing.Size(76, 18)
+        Me.lblEmpresa.Size = New System.Drawing.Size(96, 24)
         Me.lblEmpresa.TabIndex = 23
         Me.lblEmpresa.Text = "Empresa :"
         '
@@ -76,9 +79,10 @@ Partial Class SAYC_ingreso
         Me.btnIngreso.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnIngreso.Image = CType(resources.GetObject("btnIngreso.Image"), System.Drawing.Image)
         Me.btnIngreso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnIngreso.Location = New System.Drawing.Point(100, 270)
+        Me.btnIngreso.Location = New System.Drawing.Point(133, 332)
+        Me.btnIngreso.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnIngreso.Name = "btnIngreso"
-        Me.btnIngreso.Size = New System.Drawing.Size(218, 46)
+        Me.btnIngreso.Size = New System.Drawing.Size(291, 57)
         Me.btnIngreso.TabIndex = 22
         Me.btnIngreso.Text = "Ingresar"
         Me.btnIngreso.UseVisualStyleBackColor = True
@@ -88,18 +92,20 @@ Partial Class SAYC_ingreso
         Me.lblcontraseña.AutoSize = True
         Me.lblcontraseña.Enabled = False
         Me.lblcontraseña.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblcontraseña.Location = New System.Drawing.Point(35, 217)
+        Me.lblcontraseña.Location = New System.Drawing.Point(47, 267)
+        Me.lblcontraseña.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblcontraseña.Name = "lblcontraseña"
-        Me.lblcontraseña.Size = New System.Drawing.Size(93, 18)
+        Me.lblcontraseña.Size = New System.Drawing.Size(116, 24)
         Me.lblcontraseña.TabIndex = 21
         Me.lblcontraseña.Text = "Contraseña :"
         '
         'txtpassword
         '
         Me.txtpassword.Enabled = False
-        Me.txtpassword.Location = New System.Drawing.Point(134, 218)
+        Me.txtpassword.Location = New System.Drawing.Point(179, 268)
+        Me.txtpassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtpassword.Name = "txtpassword"
-        Me.txtpassword.Size = New System.Drawing.Size(210, 20)
+        Me.txtpassword.Size = New System.Drawing.Size(279, 22)
         Me.txtpassword.TabIndex = 20
         Me.txtpassword.UseSystemPasswordChar = True
         '
@@ -108,9 +114,10 @@ Partial Class SAYC_ingreso
         Me.lblcargo.AutoSize = True
         Me.lblcargo.Enabled = False
         Me.lblcargo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblcargo.Location = New System.Drawing.Point(131, 188)
+        Me.lblcargo.Location = New System.Drawing.Point(175, 231)
+        Me.lblcargo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblcargo.Name = "lblcargo"
-        Me.lblcargo.Size = New System.Drawing.Size(49, 18)
+        Me.lblcargo.Size = New System.Drawing.Size(61, 24)
         Me.lblcargo.TabIndex = 19
         Me.lblcargo.Text = "Cargo"
         '
@@ -119,9 +126,10 @@ Partial Class SAYC_ingreso
         Me.lblcar.AutoSize = True
         Me.lblcar.Enabled = False
         Me.lblcar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblcar.Location = New System.Drawing.Point(71, 188)
+        Me.lblcar.Location = New System.Drawing.Point(95, 231)
+        Me.lblcar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblcar.Name = "lblcar"
-        Me.lblcar.Size = New System.Drawing.Size(57, 18)
+        Me.lblcar.Size = New System.Drawing.Size(71, 24)
         Me.lblcar.TabIndex = 18
         Me.lblcar.Text = "Cargo :"
         '
@@ -130,9 +138,10 @@ Partial Class SAYC_ingreso
         Me.lblname.AutoSize = True
         Me.lblname.Enabled = False
         Me.lblname.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblname.Location = New System.Drawing.Point(131, 161)
+        Me.lblname.Location = New System.Drawing.Point(175, 198)
+        Me.lblname.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblname.Name = "lblname"
-        Me.lblname.Size = New System.Drawing.Size(62, 18)
+        Me.lblname.Size = New System.Drawing.Size(79, 24)
         Me.lblname.TabIndex = 17
         Me.lblname.Text = "Nombre"
         '
@@ -141,26 +150,29 @@ Partial Class SAYC_ingreso
         Me.lblNombre.AutoSize = True
         Me.lblNombre.Enabled = False
         Me.lblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombre.Location = New System.Drawing.Point(58, 161)
+        Me.lblNombre.Location = New System.Drawing.Point(77, 198)
+        Me.lblNombre.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(70, 18)
+        Me.lblNombre.Size = New System.Drawing.Size(89, 24)
         Me.lblNombre.TabIndex = 16
         Me.lblNombre.Text = "Nombre :"
         '
         'txtid
         '
-        Me.txtid.Location = New System.Drawing.Point(37, 87)
+        Me.txtid.Location = New System.Drawing.Point(49, 107)
+        Me.txtid.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtid.Name = "txtid"
-        Me.txtid.Size = New System.Drawing.Size(350, 20)
+        Me.txtid.Size = New System.Drawing.Size(465, 22)
         Me.txtid.TabIndex = 15
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(11, 56)
+        Me.Label2.Location = New System.Drawing.Point(15, 69)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(409, 16)
+        Me.Label2.Size = New System.Drawing.Size(516, 20)
         Me.Label2.TabIndex = 14
         Me.Label2.Text = "Acerque su credencial al lector o digite su id para validar su usuario"
         '
@@ -168,17 +180,18 @@ Partial Class SAYC_ingreso
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(37, 28)
+        Me.Label1.Location = New System.Drawing.Point(49, 34)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(351, 18)
+        Me.Label1.Size = New System.Drawing.Size(472, 24)
         Me.Label1.TabIndex = 13
-        Me.Label1.Text = "Bienvenido al sistema Cloud ZEUS Taxis Colectivos"
+        Me.Label1.Text = "Bienvenido al sistema de Administracion CLOUD ZEUS"
         '
         'SAYC_ingreso
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(426, 351)
+        Me.ClientSize = New System.Drawing.Size(568, 432)
         Me.Controls.Add(Me.pboxactu)
         Me.Controls.Add(Me.lblEmpre)
         Me.Controls.Add(Me.lblEmpresa)
@@ -193,8 +206,9 @@ Partial Class SAYC_ingreso
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "SAYC_ingreso"
-        Me.Text = "Ingreso - Red Cloud ZEUS"
+        Me.Text = "Ingreso - CLOUD ZEUS"
         CType(Me.pboxactu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
