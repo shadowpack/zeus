@@ -19,6 +19,6 @@ namespace puntoDeVenta.Classes
         Form ParentForm { set; }
         Object SaycSetting { set; }
         DataSet DataSource { set; }
-        void onClick(Object sender, System.EventArgs e);
+        void OnClick(Object sender, System.EventArgs e);
     }
 }

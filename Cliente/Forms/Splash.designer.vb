@@ -55,7 +55,7 @@ Partial Class Splash
         'pbar
         '
         Me.pbar.Location = New System.Drawing.Point(465, 378)
-        Me.pbar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pbar.Margin = New System.Windows.Forms.Padding(4)
         Me.pbar.Name = "pbar"
         Me.pbar.Size = New System.Drawing.Size(232, 28)
         Me.pbar.TabIndex = 3
@@ -65,7 +65,7 @@ Partial Class Splash
         Me.lblVersion.AutoSize = True
         Me.lblVersion.BackColor = System.Drawing.Color.Transparent
         Me.lblVersion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblVersion.Location = New System.Drawing.Point(489, 241)
+        Me.lblVersion.Location = New System.Drawing.Point(505, 274)
         Me.lblVersion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblVersion.Name = "lblVersion"
         Me.lblVersion.Size = New System.Drawing.Size(59, 20)
@@ -86,7 +86,7 @@ Partial Class Splash
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Splash"

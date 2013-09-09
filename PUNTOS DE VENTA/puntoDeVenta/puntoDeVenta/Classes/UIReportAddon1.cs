@@ -59,7 +59,7 @@ namespace puntoDeVenta.Classes
                 this._saycSetting = value;
             }
         }
-        public void onClick(Object sender, System.EventArgs e){
+        public void OnClick(Object sender, System.EventArgs e){
             PuntoVenta newUiReportingAddonForm = new PuntoVenta(this._saycSetting);
             if(this.mdiStatus){
                 newUiReportingAddonForm.MdiParent = this._parentForm;
