@@ -10,7 +10,7 @@ Public Class PrincipalScreen
     'DEFINIMOS LOS EVENTOS DELFORM
     Public Sub loadForm(obj As SAYC_Settings)
         Me.SAYC = obj
-        Me.Text = "CLOUD ZEUS - TAXIS COLECTIVOS : " & obj.getCompanyName
+        Me.Text = "CLOUD ZEUS : " & obj.getCompanyName
         Me.Show()
     End Sub
     Private Sub CerrarSesionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CerrarSesionToolStripMenuItem.Click
