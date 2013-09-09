@@ -41,7 +41,7 @@ Public Class SAYC_ZEUS
         Me.lblStatus.Text = "Comprobando Nuevas Versiones"
         Me.barStatus.Value = 50
         Me.newVersions()
-        Me.lblStatus.Text = "Iniciando Cloud ZEUS"
+        Me.lblStatus.Text = "Iniciando Cloud SAYC"
         Me.barStatus.Value = 100
         Me.chargeTimer()
     End Sub
